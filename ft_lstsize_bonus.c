@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mspasic <mspasic@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 17:26:47 by mspasic           #+#    #+#             */
-/*   Updated: 2024/03/25 19:16:48 by mspasic          ###   ########.fr       */
+/*   Created: 2024/03/25 17:57:45 by mspasic           #+#    #+#             */
+/*   Updated: 2024/03/25 19:17:11 by mspasic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*****************************************************/
-/* parameters: the address of a pointer to the 1st   */
-/* link of a list (lst) and the address of a pointer */
-/* to the node to tbe added to the list	             */
-/* return value: none                                */
-/* description: Adds the node ’new’ at the beginning */
-/* of the list.							    	     */
+/* parameters: the beginning of the list(lst)        */
+/* return value: the length of the list              */
+/* description: counts the number of nodes in a list */
 /*****************************************************/
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	ft_lstsize(t_list *lst)
 {
-	if (!new)
-		return ;
-	if (*lst)
-		new->next = *lst;
-	*lst = new;
+	int	n;
+
+	n = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		n++;
+	}
+	return (n);
 }

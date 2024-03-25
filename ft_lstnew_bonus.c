@@ -6,7 +6,7 @@
 /*   By: mspasic <mspasic@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 17:17:03 by mspasic           #+#    #+#             */
-/*   Updated: 2024/03/25 17:26:01 by mspasic          ###   ########.fr       */
+/*   Updated: 2024/03/25 19:27:06 by mspasic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *new_node;
+	t_list	*new_node;
 
 	new_node = malloc(sizeof(t_list));
 	if (!new_node)
 		return (NULL);
 	new_node->content = content;
 	new_node->next = NULL;
-   return (new_node);
+	return (new_node);
 }
-

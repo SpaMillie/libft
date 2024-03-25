@@ -6,7 +6,7 @@
 /*   By: mspasic <mspasic@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:57:51 by mspasic           #+#    #+#             */
-/*   Updated: 2024/03/25 17:16:21 by mspasic          ###   ########.fr       */
+/*   Updated: 2024/03/25 19:26:25 by mspasic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 t_list	*lstlast(t_list *lst)
 {
 	if (!lst)
-		return (NULL);		//if it can't enter the while loop, won't the function just return NULL if !lst?
-	while(lst -> next != NULL)
+		return (NULL);
+	while (lst -> next != NULL)
 		lst = lst -> next;
 	return (lst);
 }
